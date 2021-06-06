@@ -1,0 +1,33 @@
+<html></html>
+
+<script>
+class CousinsEtCousines {
+    constructor(prenom, age, estunefille) {
+      this.prenom = prenom;
+      this.age = age;
+      this.estunefille = estunefille;
+    }
+    
+  }
+
+  let christophe = new CousinsEtCousines("christophe", 59, false);
+  let patrick = new CousinsEtCousines("patrick", 58, false);
+  let cedric = new CousinsEtCousines("cedric", 57, false);
+  let nathalie = new CousinsEtCousines("nathalie", 56, true);
+  let valerie = new CousinsEtCousines("valerie", 55, true);
+
+  let famille = [christophe, patrick, cedric, nathalie, valerie];
+
+  function quiAimeQuoi (famille){
+    for (let i = 0; i < famille.length; i++) {
+      if(famille[i].estunefille == true){
+          console.log(famille[i].prenom + " a " + famille[i].age  + " ans et aime le shopping");
+
+      } else {
+        console.log(famille[i].prenom + " a " + famille[i].age  + " ans et aime le foot");
+      }
+    }
+}
+  quiAimeQuoi(famille)
+  
+</script>

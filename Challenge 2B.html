@@ -1,0 +1,39 @@
+<html></html>
+
+<script>
+  class CousinsEtCousines {
+    constructor(prenom, age, estunefille) {
+      this.prenom = prenom;
+      this.age = age;
+      this.estunefille = estunefille;
+    }
+  }
+
+  let christophe = new CousinsEtCousines("christophe", 59, false);
+  let patrick = new CousinsEtCousines("patrick", 58, false);
+  let cedric = new CousinsEtCousines("cedric", 57, false);
+  let nathalie = new CousinsEtCousines("nathalie", 56, true);
+  let valerie = new CousinsEtCousines("valerie", 15, true);
+
+  let famille = [christophe, patrick, cedric, nathalie, valerie];
+
+  function esperanceDeVie(famille) {
+    let edv ;   // Declaration de variable 
+    for (let i = 0; i < famille.length; i++) {
+      edv = 79;  // Initialisation de la variable à chaque tour de boucle
+      if (famille[i].estunefille == true) {
+        edv = edv + (edv * 25) / 100;
+      }
+      if (famille[i].age < 20) {
+        edv = edv + (edv * 10) / 100;
+      }
+      if (famille[i].prenom.includes("e")) {
+        edv = edv - (edv * 5) / 100;
+      }
+
+      console.log(famille[i].prenom + " a " + edv + " annees d'esperance de vie" ) ;
+          
+    }
+  }
+  esperanceDeVie(famille);
+</script>

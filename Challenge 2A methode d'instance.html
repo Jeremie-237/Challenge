@@ -1,0 +1,35 @@
+<html></html>
+
+<script>
+class CousinsEtCousines {
+    constructor(prenom, age, estunefille) {
+      this.prenom = prenom;
+      this.age = age;
+      this.estunefille = estunefille;
+    }
+    quiaimequoi(){ // creation à l'interieur de la class d'une methode d'instance
+        if(this.estunefille == true){
+            console.log(this.prenom + " a " + this.age  + " ans et aime le shopping");
+        } else {
+            console.log(this.prenom + " a " + this.age  + " ans et aime le foot");
+        }
+    }
+  }
+
+
+  let christophe = new CousinsEtCousines("christophe", 59, false);
+  let patrick = new CousinsEtCousines("patrick", 58, false);
+  let cedric = new CousinsEtCousines("cedric", 57, false);
+  let nathalie = new CousinsEtCousines("nathalie", 56, true);
+  let valerie = new CousinsEtCousines("valerie", 55, true);
+
+  christophe.quiaimequoi(); // invocation de la methode par une instance de la classe
+
+  
+
+  let famille = [christophe, patrick, cedric, nathalie, valerie];
+  for (let i = 1 ; i <famille.length ; i++){
+      famille[i].quiaimequoi(); // invocation de la methode sur l'element courant du tableau ( element du tableau qui est à l'index "i")
+  }
+  
+</script>
